@@ -3,8 +3,6 @@
 // (no lines with multiple semicolons necessary!)
 // Execute `rustlings hint move_semantics3` for hints :)
 
-// I AM NOT DONE
-
 fn main() {
     let vec0 = Vec::new();
 
@@ -17,7 +15,8 @@ fn main() {
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 }
 
-fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
+// ownership 넘겨받았으니 immutable했던 것을 mutable하게 변경하여 사용!
+fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
     vec.push(22);
     vec.push(44);
     vec.push(66);
